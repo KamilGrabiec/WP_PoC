@@ -1,9 +1,9 @@
 # Cypress
-    cypress/videos/
-    cypress/screenshots/
+cypress/videos/
+cypress/screenshots/
 
 
 
 # Node.js
-    node_modules/
+node_modules/
 

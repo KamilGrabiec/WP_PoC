@@ -23,3 +23,14 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+
+Cypress.Commands.add('handleCookies', () => {
+    cy.wait(2000)
+    cy.get('body').then((body) => {
+        if (body.find('[id="onetrust-banner-sdk"]').length > 0) {
+          // If the cookie banner exists, click the 'Accept' button
+          cy.get('[id="onetrust-accept-btn-handler"]').click();
+        }
+    }) 
+})
